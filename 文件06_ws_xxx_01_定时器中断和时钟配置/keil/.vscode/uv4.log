@@ -1,0 +1,19 @@
+*** Using Compiler 'V6.22', folder: 'D:\keilc51\c51\ARM\ARMCLANG\Bin'
+Build target 'G3507'
+Before Build - User command #1: cmd.exe /C "d:\Document\电赛\模块整理\M0G3507模块\examples\文件06_ws王胜_01_定时器中断和时钟配置\keil\../../../tools/keil/syscfg.bat 'd:\Document\电赛\模块整理\M0G3507模块\examples\文件06_ws王胜_01_定时器中断和时钟配置\keil\' ncontroller.syscfg"
+Using Sysconfig Tool from "C:\ti\sysconfig_1.20.0\sysconfig_cli.bat"
+"Update the file located at <sdk path>/tools/keil/syscfg.bat to use a different version"
+Error: File "d:\Document\鐢佃禌\妯″潡鏁寸悊\M0G3507妯″潡\examples\鏂囦欢06_ws鐜嬭儨_01_瀹氭椂鍣ㄤ腑鏂拰鏃堕挓閰嶇疆\ncontroller.syscfg" does not exist
+    at l.contents [as readScriptFile] (C:\ti\sysconfig_1.20.0\dist\webpack:\sysconfig\src\pinmux\services\resources\otherLoaders\scriptAndProductLoader.ts:32:10)
+    at parsedArgs (C:\ti\sysconfig_1.20.0\dist\webpack:\sysconfig\src\pinmux\services\args\resolveScriptArg.ts:14:10)
+    at async Promise.all (index 0)
+    at parsedArgs (C:\ti\sysconfig_1.20.0\dist\webpack:\sysconfig\src\pinmux\services\args\resolveScriptArg.ts:30:19)
+    at resolvedArgs (C:\ti\sysconfig_1.20.0\dist\webpack:\sysconfig\src\pinmux\services\args\parseAndResolveArgs.ts:24:6)
+    at t.runCLI (C:\ti\sysconfig_1.20.0\dist\webpack:\sysconfig\src\cli\runCli.ts:32:9)
+compiling main.c...
+compiling led.c...
+linking...
+Program Size: Code=1584 RO-data=232 RW-data=0 ZI-data=360  
+FromELF: creating hex file...
+".\Objects\ncontroller.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:04

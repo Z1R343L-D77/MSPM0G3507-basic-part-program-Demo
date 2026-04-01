@@ -1,0 +1,163 @@
+{
+    "name": "G3507",
+    "target": "G3507",
+    "toolchain": "AC6",
+    "toolchainLocation": "D:\\keilc51\\c51\\ARM\\ARMCLANG",
+    "toolchainCfgFile": "c:\\Users\\Z1R343L\\.vscode\\extensions\\cl.eide-3.18.1\\res\\data\\models\\win32/arm.v6.model.json",
+    "buildMode": "fast|multhread",
+    "showRepathOnLog": true,
+    "threadNum": 12,
+    "rootDir": "d:\\Document\\电赛\\模块整理\\M0G3507模块\\examples\\文件06_ws王胜_09_\\keil",
+    "dumpPath": "build\\G3507",
+    "outDir": "build\\G3507",
+    "incDirs": [
+        ".",
+        "../../../source/third_party/CMSIS/Core/Include",
+        "../../../source",
+        "..",
+        "../ndrivers",
+        "Hareware",
+        "System",
+        "../keil_user",
+        "../keil_user/Hareware",
+        "../keil_user/System",
+        "../keil_user/System/oled",
+        "../keil_user/Driver/oled",
+        ".cmsis/include",
+        "RTE/_G3507"
+    ],
+    "libDirs": [],
+    "defines": [
+        "__MSPM0G3507__"
+    ],
+    "sourceList": [
+        "../../../source/ti/driverlib/dl_adc12.c",
+        "../../../source/ti/driverlib/dl_aes.c",
+        "../../../source/ti/driverlib/dl_aesadv.c",
+        "../../../source/ti/driverlib/dl_common.c",
+        "../../../source/ti/driverlib/dl_crc.c",
+        "../../../source/ti/driverlib/dl_crcp.c",
+        "../../../source/ti/driverlib/dl_dac12.c",
+        "../../../source/ti/driverlib/dl_dma.c",
+        "../../../source/ti/driverlib/dl_flashctl.c",
+        "../../../source/ti/driverlib/dl_i2c.c",
+        "../../../source/ti/driverlib/dl_keystorectl.c",
+        "../../../source/ti/driverlib/dl_lcd.c",
+        "../../../source/ti/driverlib/dl_lfss.c",
+        "../../../source/ti/driverlib/dl_mathacl.c",
+        "../../../source/ti/driverlib/dl_mcan.c",
+        "../../../source/ti/driverlib/dl_opa.c",
+        "../../../source/ti/driverlib/dl_rtc_common.c",
+        "../../../source/ti/driverlib/dl_spi.c",
+        "../../../source/ti/driverlib/dl_timer.c",
+        "../../../source/ti/driverlib/dl_trng.c",
+        "../../../source/ti/driverlib/dl_uart.c",
+        "../../../source/ti/driverlib/dl_vref.c",
+        "../../../source/ti/driverlib/m0p/dl_interrupt.c",
+        "../../../source/ti/driverlib/m0p/sysctl/dl_sysctl_mspm0g1x0x_g3x0x.c",
+        "../keil_user/Driver/oled/drv_oled.c",
+        "../keil_user/Driver/oled/drv_spi.c",
+        "../keil_user/Driver/oled/glcdfont.c",
+        "../keil_user/Driver/oled/ssd1306.c",
+        "../keil_user/Hareware/adc.c",
+        "../keil_user/Hareware/beep.c",
+        "../keil_user/Hareware/encoder.c",
+        "../keil_user/Hareware/key.c",
+        "../keil_user/Hareware/led.c",
+        "../keil_user/Hareware/oled.c",
+        "../keil_user/Hareware/servo.c",
+        "../keil_user/System/my_pwm.c",
+        "../keil_user/System/my_time.c",
+        "../keil_user/System/systick.c",
+        "../main.c",
+        "../ti_msp_dl_config.c",
+        "startup_mspm0g350x_uvision.s"
+    ],
+    "sourceParams": {},
+    "sourceParamsMtime": 1720434503902.6084,
+    "options": {
+        "version": 3,
+        "beforeBuildTasks": [
+            {
+                "name": "cmd.exe /C \"$P../../../tools/keil/syscfg.bat '$P' ncontroller.syscfg\"",
+                "command": "cmd.exe /C \"$P../../../tools/keil/syscfg.bat '$P' ncontroller.syscfg\"",
+                "disable": false,
+                "abortAfterFailed": true,
+                "stopBuildAfterFailed": true
+            }
+        ],
+        "afterBuildTasks": [
+            {
+                "name": "Copy linker output for Keil User Commands",
+                "command": "copy \".\\${OutDirBase}\\${ProjectName}.axf\" \".\\${OutDirBase}\\${KEIL_OUTPUT_NAME}.axf\"",
+                "disable": false,
+                "abortAfterFailed": true
+            },
+            {
+                "name": "cmd.exe /C \"$P../../../tools/keil/gentxt.bat '$P' ncontroller\"",
+                "command": "cmd.exe /C \"$P../../../tools/keil/gentxt.bat '$P' ncontroller\"",
+                "disable": true,
+                "abortAfterFailed": true
+            }
+        ],
+        "global": {
+            "use-microLIB": false,
+            "output-debug-info": "enable",
+            "microcontroller-cpu": "cortex-m0+",
+            "microcontroller-fpu": "cortex-m0+",
+            "microcontroller-float": "cortex-m0+",
+            "target": "cortex-m0+"
+        },
+        "c/cpp-compiler": {
+            "optimization": "level-2",
+            "language-c": "c99",
+            "language-cpp": "c++11",
+            "link-time-optimization": false,
+            "one-elf-section-per-function": true,
+            "short-enums#wchar": true,
+            "warnings": "misra-compatible"
+        },
+        "asm-compiler": {
+            "$use": "asm-auto"
+        },
+        "linker": {
+            "output-format": "elf",
+            "misc-controls": "--diag_suppress=L6329",
+            "xo-base": "",
+            "ro-base": "0x00000000",
+            "rw-base": "0x20000000",
+            "$disableOutputTask": true,
+            "link-scatter": [
+                "\"d:/Document/电赛/模块整理/M0G3507模块/examples/文件06_ws王胜_09_/keil/mspm0g3507.sct\""
+            ]
+        }
+    },
+    "env": {
+        "KEIL_OUTPUT_NAME": "ncontroller",
+        "workspaceFolder": "d:\\Document\\电赛\\模块整理\\M0G3507模块\\examples\\文件06_ws王胜_09_\\keil",
+        "workspaceFolderBasename": "keil",
+        "OutDir": "d:\\Document\\电赛\\模块整理\\M0G3507模块\\examples\\文件06_ws王胜_09_\\keil\\build\\G3507",
+        "OutDirRoot": "build",
+        "OutDirBase": "build\\G3507",
+        "ProjectName": "G3507",
+        "ConfigName": "G3507",
+        "ProjectRoot": "d:\\Document\\电赛\\模块整理\\M0G3507模块\\examples\\文件06_ws王胜_09_\\keil",
+        "ExecutableName": "d:\\Document\\电赛\\模块整理\\M0G3507模块\\examples\\文件06_ws王胜_09_\\keil\\build\\G3507\\G3507",
+        "SYS_Platform": "win32",
+        "SYS_DirSep": "\\",
+        "SYS_DirSeparator": "\\",
+        "SYS_PathSep": ";",
+        "SYS_PathSeparator": ";",
+        "SYS_EOL": "\r\n",
+        "ToolchainRoot": "D:\\keilc51\\c51\\ARM\\ARMCLANG"
+    },
+    "sha": {
+        "c/cpp-defines": "44dcef71477619ebb4dfbbe83a33b880",
+        "beforeBuildTasks": "d6f349ec4ec69203a4c7b70a586898ab",
+        "afterBuildTasks": "5d954fbb1d46f084472b6303700bdc03",
+        "global": "33461117166adea88a4492d80872f289",
+        "c/cpp-compiler": "7e99f131eede1f7eb285a1cd160266c6",
+        "asm-compiler": "f16bc066fd83f6b0cf6cd2b7eea65136",
+        "linker": "3f597818c4ce08b74b61d041bc020b83"
+    }
+}
